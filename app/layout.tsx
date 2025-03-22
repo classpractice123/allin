@@ -1,24 +1,24 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { BookProvider } from '../context/BookContext'; // Adjust path as needed
+"use client"; // Ensure client-side rendering
+
+import type { Metadata } from "next";
+import "./globals.css";
+import { BrowserRouter } from "react-router-dom"; // Import BrowserRouter
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: "v0 App",
+  description: "Created with v0",
+  generator: "v0.dev",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
-        <BookProvider>
+        <BrowserRouter>
           {children}
-        </BookProvider>
+        </BrowserRouter>
       </body>
     </html>
   );
