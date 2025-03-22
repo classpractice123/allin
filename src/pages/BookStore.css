@@ -1,0 +1,166 @@
+.bookstore-page {
+  min-height: 100vh;
+}
+
+.bookstore-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bookstore-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.bookstore-header p {
+  color: #666;
+}
+
+.bookstore-filters {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.search-filter {
+  margin-bottom: 20px;
+}
+
+.search-filter form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-filter input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.search-filter button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-filter button:hover {
+  background-color: #2980b9;
+}
+
+.genre-filter {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.genre-button {
+  padding: 8px 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.genre-button:hover {
+  background-color: #f0f0f0;
+}
+
+.genre-button.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-filter label {
+  font-weight: bold;
+}
+
+.sort-filter select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.results-info {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .genre-buttons {
+    justify-content: center;
+  }
+
+  .sort-filter {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-filter form {
+    flex-direction: column;
+  }
+
+  .search-filter input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .search-filter button {
+    border-radius: 4px;
+  }
+}
+

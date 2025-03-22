@@ -1,0 +1,212 @@
+.voting-result {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.voting-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.voting-result-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.total-votes {
+  background-color: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.winner-section {
+  margin-bottom: 30px;
+}
+
+.winner-label {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.winner-card {
+  display: flex;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.winner-image {
+  flex: 0 0 150px;
+  height: 150px;
+}
+
+.winner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.winner-info {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.winner-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.winner-author {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.winner-votes {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.votes-percentage {
+  color: #666;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.results-list {
+  margin-top: 30px;
+}
+
+.results-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-rank {
+  flex: 0 0 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.result-image {
+  flex: 0 0 60px;
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-info h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.result-author {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.result-votes {
+  flex: 0 0 200px;
+  padding-left: 20px;
+}
+
+.votes-bar-container {
+  height: 8px;
+  background-color: #edf2f7;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.votes-bar {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+.votes-text {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.votes-count {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .winner-card {
+    flex-direction: column;
+  }
+
+  .winner-image {
+    flex: 0 0 auto;
+    height: 200px;
+    width: 100%;
+  }
+
+  .result-votes {
+    flex: 0 0 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .voting-result-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .total-votes {
+    margin-top: 10px;
+  }
+
+  .result-item {
+    flex-wrap: wrap;
+  }
+
+  .result-votes {
+    flex: 0 0 100%;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+}
+

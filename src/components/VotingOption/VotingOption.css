@@ -1,0 +1,121 @@
+.voting-option {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.voting-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.voting-option.selected {
+  border: 2px solid #3498db;
+}
+
+.voting-option.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.voting-option-image {
+  flex: 0 0 120px;
+  height: 120px;
+}
+
+.voting-option-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voting-option-content {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.voting-option-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.option-author {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.option-description {
+  color: #777;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.voting-option-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.select-indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.voting-option.selected .select-indicator {
+  border-color: #3498db;
+}
+
+.voting-option.selected .select-indicator:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3498db;
+}
+
+@media (max-width: 576px) {
+  .voting-option {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .voting-option-image {
+    flex: 0 0 auto;
+    height: 180px;
+    width: 100%;
+  }
+
+  .voting-option-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+}
+
